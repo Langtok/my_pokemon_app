@@ -36,6 +36,16 @@ const PokemonDetail = () => {
   const primaryType = types[0]?.type.name || 'normal';
   const backgroundColor = pokemonTypeColors[primaryType] || '#D3D3D3';
 
+  // Calculate gender ratio from species data
+  const genderRate = species.gender_rate; // gender_rate is a number from 0 to 8
+  const femalePercentage = genderRate === -1 ? 'Genderless' : `${(genderRate / 8) * 100}%`;
+  const malePercentage = genderRate === -1 ? 'Genderless' : `${((8 - genderRate) / 8) * 100}%`;
+
+  // Get egg groups and species name
+  const speciesName = species.genera.find((genus) => genus.language.name === 'en')?.genus || 'Unknown';
+  const eggGroups = species.egg_groups.map((group) => group.name).join(', ') || 'Unknown';
+  const eggCycle = species.hatch_counter ? `${species.hatch_counter} cycles` : 'Unknown';
+
   const tabs = ['About', 'Base Stats', 'Evolution', 'Moves'];
 
   return (
@@ -72,7 +82,7 @@ const PokemonDetail = () => {
         {activeTab === 'About' && (
           <div className="tab-content">
             <h3>Species</h3>
-            <p>Seed</p>
+            <p>{speciesName}</p>
             <h3>Height</h3>
             <p>{(height / 10).toFixed(1)} m ({((height / 10) * 3.281).toFixed(1)} ft)</p>
             <h3>Weight</h3>
@@ -81,11 +91,11 @@ const PokemonDetail = () => {
             <p>{abilities.map((ability) => ability.ability.name).join(', ')}</p>
             <h3>Breeding</h3>
             <h4>Gender</h4>
-            <p>♂ 87.5%, ♀ 12.5%</p>
+            <p>♂ {malePercentage}, ♀ {femalePercentage}</p>
             <h4>Egg Groups</h4>
-            <p>Monster</p>
+            <p>{eggGroups}</p>
             <h4>Egg Cycle</h4>
-            <p>Grass</p>
+            <p>{eggCycle}</p>
           </div>
         )}
 
