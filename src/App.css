@@ -1,43 +1,87 @@
-.App {
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  color: #333;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main Container */
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Pokémon Grid */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Pokémon Card */
+.pokemon-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Pokémon Image */
+.pokemon-card img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Pokémon Name */
+.pokemon-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Type Badges */
+.pokemon-types {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 8px;
+}
+
+.type-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
   color: white;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Type Colors */
+.type-grass { background: #78C850; }
+.type-poison { background: #A040A0; }
+.type-fire { background: #F08030; }
+.type-water { background: #6890F0; }
+.type-electric { background: #F8D030; }
+.type-ice { background: #98D8D8; }
+.type-ground { background: #E0C068; }
+.type-flying { background: #A890F0; }
+.type-psychic { background: #F85888; }
+.type-bug { background: #A8B820; }
+.type-rock { background: #B8A038; }
+.type-ghost { background: #705898; }
+.type-dark { background: #705848; }
+.type-dragon { background: #7038F8; }
+.type-steel { background: #B8B8D0; }
+.type-fairy { background: #EE99AC; }

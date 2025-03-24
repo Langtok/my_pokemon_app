@@ -31,13 +31,39 @@ Start the development server:
 $> npm start
 
 ## Usage
-TODO - How does it work?
+Once the application is running:
+
+Browse the main page to view a list of Pokémon.
+
+Use the search bar to filter Pokémon by name.
+
+Click on a Pokémon to view its detailed information.
+
+Technologies Used
+
+ReactJS
+
+Axios
+
+CSS for styling
+
+External Pokémon API (e.g., PokéAPI)
+
+Error Handling
+
+The application includes error handling for:
+
+Failed API requests (e.g., no internet, server errors)
+
+Invalid search queries
+
+Loading indicators while fetching data
 ```
 ./my_project argument1 argument2
 ```
 
 ### The Core Team
-
+Matthew Prince Emmanuel
 
 <span><i>Made at <a href='https://qwasar.io'>Qwasar SV -- Software Engineering School</a></i></span>
 <span><img alt='Qwasar SV -- Software Engineering School's Logo' src='https://storage.googleapis.com/qwasar-public/qwasar-logo_50x50.png' width='20px' /></span>
