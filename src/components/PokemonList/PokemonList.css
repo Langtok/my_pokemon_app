@@ -1,0 +1,22 @@
+.pokemon-list {
+    padding: 20px;
+  }
+  
+  .pokedex-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .load-more-btn {
+    background-color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+  }
+  
+  .load-more-btn:hover {
+    background-color: #0056b3;
+  }

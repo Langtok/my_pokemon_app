@@ -1,0 +1,129 @@
+.pokemon-detail-container {
+    max-width: 500px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pokemon-detail-header {
+    position: relative;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .pokemon-name {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .pokemon-id {
+    font-size: 1rem;
+    opacity: 0.8;
+  }
+  
+  .pokemon-types {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .type-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .type-fire { background-color: #FF6347; }
+  .type-water { background-color: #20B2AA; }
+  .type-grass { background-color: #228B22; }
+  .type-poison { background-color: #6A0DAD; }
+  .type-electric { background-color: #FFD700; }
+  
+  .pokemon-image {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
+  
+  .pokemon-detail-body {
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+  
+  .tab-content h3, .tab-content h4 {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0 5px;
+  }
+  
+  .tab-content p {
+    margin: 0 0 10px;
+    color: #666;
+  }
+  
+  .stat-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .stat-name {
+    width: 100px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .stat-value {
+    width: 40px;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .stat-bar {
+    flex: 1;
+    height: 5px;
+    background: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .stat-bar-fill {
+    height: 100%;
+    transition: width 0.3s;
+  }

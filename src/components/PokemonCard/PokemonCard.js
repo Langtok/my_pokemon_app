@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './PokemonCard.css';
 
 const PokemonCard = ({ pokemon }) => {
   const { id, name, types, sprites } = pokemon;
@@ -33,19 +34,26 @@ const PokemonCard = ({ pokemon }) => {
 
   return (
     <div className="col-lg-2 col-md-3 col-sm-6 mb-4">
-      <div className="card h-100 text-center" style={{ backgroundColor: fetchBackgroundColor() }}>
-        <img
-          src={sprites.front_default}
-          className="card-img-top img-fluid"
-          alt={name}
-        />
-        <div className="card-body">
-          <h5 className="card-title text-capitalize">{name}</h5>
-          <Link to={`/pokemon/${id}`} state={{ pokemon }} className="btn btn-primary">
-            View Details
-          </Link>
+      <Link to={`/pokemon/${id}`} state={{ pokemon }} className="pokemon-card-link">
+        <div className="pokemon-card h-100 text-center" style={{ backgroundColor: fetchBackgroundColor() }}>
+          <img
+            src={sprites.front_default}
+            className="card-img-top img-fluid"
+            alt={name}
+          />
+          <div className="card-body">
+            <h5 className="card-title text-capitalize">{name}</h5>
+            <p className="pokemon-id">#{String(id).padStart(3, '0')}</p>
+            <div className="pokemon-types">
+              {types.map((type) => (
+                <span key={type.type.name} className={`type-badge type-${type.type.name}`}>
+                  {type.type.name}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

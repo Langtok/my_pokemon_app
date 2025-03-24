@@ -1,10 +1,12 @@
 import React from 'react';
 import PokemonCard from '../PokemonCard/PokemonCard';
 import SearchBar from '../SearchBar/SearchBar';
+import './PokemonList.css';
 
 const PokemonList = ({ pokemonList, onSearch, onLoadMore, isLoading }) => {
   return (
     <div className="pokemon-list container">
+      <h1 className="pokedex-title">Pokédex</h1>
       <SearchBar onSearch={onSearch} />
       <div className="row mt-4">
         {pokemonList.length > 0 ? (
@@ -17,7 +19,7 @@ const PokemonList = ({ pokemonList, onSearch, onLoadMore, isLoading }) => {
       </div>
       <div className="text-center mt-4">
         <button
-          className="btn btn-primary"
+          className="btn btn-primary load-more-btn"
           onClick={onLoadMore}
           disabled={isLoading}
         >
