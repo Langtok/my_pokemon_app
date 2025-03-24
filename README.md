@@ -59,7 +59,7 @@ Invalid search queries
 
 Loading indicators while fetching data
 ```
-./my_project argument1 argument2
+https://my-pokemon-app-mu.vercel.app/
 ```
 
 ### The Core Team
