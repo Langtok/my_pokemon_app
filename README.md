@@ -2,13 +2,33 @@
 ***
 
 ## Task
-TODO - What is the problem? And where is the challenge?
+This project is a multi-page ReactJS application that displays a list of Pokémon with lazy loading. Users can search for Pokémon using a search bar and view detailed information about each Pokémon on a separate page. The challenge is to efficiently fetch data from an external API using Axios while handling errors (such as no internet connection or bad requests) gracefully.
 
 ## Description
-TODO - How have you solved the problem?
+To solve this problem, the application is structured as follows:
+
+The main page fetches and displays Pokémon data with lazy loading to optimize performance.
+
+A search bar allows users to filter Pokémon dynamically.
+
+Clicking on a Pokémon takes the user to a detailed page with more information.
+
+API requests are handled using Axios, with error handling to provide a smooth user experience.
+
+The project follows a component-based architecture, with separate CSS files for each component.
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+To install and run the project locally, follow these steps:
+
+Clone the repository:
+$> git clone https://github.com/your-repo/pokemon-app.git
+$> cd my_pokemon_app
+
+Install dependencies:
+$> npm install
+
+Start the development server:
+$> npm start
 
 ## Usage
 TODO - How does it work?
